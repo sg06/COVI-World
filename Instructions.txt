@@ -1,0 +1,88 @@
+﻿############################################################################
+
+Command to run the file:
+
+python3 main.py
+	or
+python main.py
+
+(depends upon your system)
+
+############################################################################
+
+Only main.py file is needed to be executed, all other files are the supporting files.
+
+Pre-processing will take a time of around 150 sec (on my system)
+
+Time for pre-processing depends upon Internet Speed as well.
+
+To Access the program of Assignment 4, Select 'Data Regarding COVID-19' on the very first menu page.
+
+To Access the program of Assignment 5, Select 'NEWS Regarding COVID-19' on the very first menu page.
+
+############################################################################
+
+Data Regarding COVID-19:
+
+	Follow Instructions as shown on terminal.
+
+Date format will be: mm-dd-yyyy
+
+In data, if null, or an empty string, or N/A or negative value is given, then an error message is generated. (rather than displaying those values or computing using those values)
+
+In range query fields, the date is asked, and in that start should be strictly less than the end date, otherwise, an error is generated.
+
+A smoothing factor of 0.0001 is used for the computation of change in percentage kinds of queries.
+
+Log File will be generated with the name '21CS60R53_log_file.txt'
+(First Line of the log file is blank, entries began from 2nd line)
+(Output will be stored in log file only if all the inputs are correct)
+(End the code properly, then only this file is over-written correctly)
+
+	In this file, all the output shown on terminal is stored in this too.
+
+	Format of log file:
+
+	For World:
+	<Place>	<field_requested>	<field_value>
+	(if field value is not defined, then error will be shown, in place of field value)
+
+	For Continent:
+	<Place>	<field_requested>	<field_value>	<percent_of_total_world_cases>
+	(if field value is not defined, then error will be shown, in place of field value and percent of total world cases)
+
+	For Country:
+	(Normal Queries 0 to 9)
+	<Place>	<field_requested>	<field_value>	<percent_of_total_world_cases>
+	(if field value is not defined, then error will be shown, in place of field value and percent of total world cases)
+
+	(For Range Queries 10 to 13)
+	<Place>	<field_requested>	<Start_Date>	<End_Date>	<field_value>	<country_having_closest_field_value>
+	(if field value is not defined, then error will be shown, in place of field value and country_having_closest_field_value)
+	(if file don't have data of that field, then Dates input is not asked, and error will be shown, in place of start date, end date, field value and country_having_closest_field_value
+
+
+############################################################################
+
+NEWS Regarding COVID-19:
+
+	Select Timeline, for Timeline related NEWS (Task 1 and 2 of Ass-5):
+		For Task-1 Output: Select 'Get NEWS of given Timeline'
+		For Task-2 Output: Select 'Compare 2 Timelines'
+	
+	Select Response, for Response related NEWS (Task 1 and 2 of Ass-5):
+		For Task-1 Output: Select 'Get NEWS of given range of response'
+		For Task-2 Output: Select 'Compare 2 range of responses'
+		
+	Select Country wise NEWS, for country related NEWS (Task 3, 4, 5 and 6 of Ass-5):
+		Select the country, whose information you want to know:
+			Task-3: Valid Range is Directly Displayed to you, after selection of country.
+			Task-4(a): Select 'To extract NEWS of certain range' to get all the NEWS
+			Task-4(b): Select 'To Plot word cloud for any valid given range' to plot word cloud for above data.
+			Task-5: Select 'To know top 3 closest country, according to Jaccard Similarity (considering all the words)'
+			Task-6: Select 'To know top 3 closest country, according to Jaccard Similarity (considering only covid words)'
+			
+Date format will be: dd-mm-yyyy
+Smoothing Factor of 0.0001 is added to denominator, incase of division.
+
+Data will be extracted, for range including both dates (start date and end date).
